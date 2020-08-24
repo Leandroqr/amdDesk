@@ -1,0 +1,135 @@
+<!-- This file is used to store sidebar items, starting with Backpack\Base 0.9.0 -->
+{{-- @can('Área Administración') --}}
+<li class="nav-title">Área Administración</li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('dashboard') }}"><i class="la la-home nav-icon"></i> {{ trans('backpack::base.dashboard') }}</a></li>
+
+{{-- @can('Menú Backup') --}}
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('backup') }}'><i class='nav-icon la la-hdd-o'></i> Backups</a></li>
+{{-- @endcan --}}
+{{-- @can('Menú Log') --}}
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('log') }}'><i class='nav-icon la la-terminal'></i> Logs</a></li>
+{{-- @endcan --}}
+{{-- @can('Menú Settings') --}}
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('setting') }}'><i class='nav-icon fa fa-cog'></i> Settings</a></li>
+{{-- @endcan --}}
+{{-- @can('Menú Pages') --}}
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('page') }}'><i class='nav-icon fa fa-file-o'></i> <span>Pages</span></a></li>
+{{-- @endcan --}}
+{{-- @can('Menú Autenticación') --}}
+{{-- <!-- Users, Roles, Permissions --> --}}
+
+<li class="nav-item nav-dropdown">
+	<a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon fa fa-group"></i> Authentication</a>
+	<ul class="nav-dropdown-items">
+        {{-- @can('Menú Usuarios') --}}
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('user') }}"><i class="nav-icon fa fa-user"></i> <span>Users</span></a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Roles') --}}
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('role') }}"><i class="nav-icon fa fa-group"></i> <span>Roles</span></a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Permisos') --}}
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('permission') }}"><i class="nav-icon fa fa-key"></i> <span>Permissions</span></a></li>
+        {{-- @endcan --}}
+	</ul>
+</li>
+{{-- @endcan --}}
+
+{{-- @can('Menú Constructor') --}}
+    <li class='nav-item'><a class='nav-link' href='{{ backpack_url('menu-item') }}'><i class='nav-icon la la-list'></i> <span>Menu</span></a></li>
+{{-- @endcan --}}
+{{-- @can('Menú Noticias') --}}
+<li class="nav-item nav-dropdown">
+    <a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon fa fa-newspaper-o"></i>News</a>
+    <ul class="nav-dropdown-items">
+        {{-- @can('Menú Artículos') --}}
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('article') }}"><i class="nav-icon fa fa-newspaper-o"></i> Articles</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Categorías') --}}
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('category') }}"><i class="nav-icon fa fa-list"></i> Categories</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Tags') --}}
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('tag') }}"><i class="nav-icon fa fa-tag"></i> Tags</a></li>
+        {{-- @endcan --}}
+    </ul>
+</li>
+{{-- @endcan --}}
+{{-- @can('Menú Archivos') --}}
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('elfinder') }}"><i class="nav-icon la la-files-o"></i> <span>{{ trans('backpack::crud.file_manager') }}</span></a></li>
+{{-- @endcan --}}
+{{-- @endcan --}}
+{{-- @can('Área Empresa') --}}
+<li class="nav-title">Área Empresa</li>
+    {{-- @can('Menú Data') --}}
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#"><i class='nav-icon la la-list'></i>Data</a>
+                <ul class="nav-dropdown-items">
+                    {{-- @can('Menú Países') --}}
+                        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('paise') }}'><i class='nav-icon la la-terminal'></i> Paises</a></li>
+                    {{-- @endcan --}}
+                    {{-- @can('Menú Departamentos') --}}
+                        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('departamento') }}'><i class='nav-icon la la-terminal'></i> Departamentos</a></li>
+                    {{-- @endcan --}}
+                    {{-- @can('Menú Ciudades') --}}
+                        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('ciudade') }}'><i class='nav-icon la la-terminal'></i> Ciudades</a></li>
+                    {{-- @endcan --}}
+                    {{-- @can('Menú Tipo Cliente') --}}
+                        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('tipocl') }}'><i class='nav-icon la la-terminal'></i> Tipo Cliente</a></li>
+                    {{-- @endcan --}}
+                    {{-- @can('Menú Clientes') --}}
+                        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('cliente') }}'><i class='nav-icon la la-terminal'></i> Clientes</a></li>
+                    {{-- @endcan --}}
+                </ul>
+            </li>
+    {{-- @endcan --}}
+{{-- @endcan --}}
+{{-- @can('Área de Usuarios') --}}
+<li class="nav-title">Área de Usuarios</li>
+{{-- @can('Menú Soporte') --}}
+<li class="nav-item nav-dropdown">
+    <a class="nav-link nav-dropdown-toggle" href="#"><i class='nav-icon la la-list'></i>Soporte</a>
+        <ul class="nav-dropdown-items">
+        {{-- @can('Menú Secciones') --}}
+            <li class='nav-item'><a class='nav-link' href='{{ backpack_url('section') }}'><i class='nav-icon la la-terminal'></i> Secciones</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Grupos') --}}
+            <li class='nav-item'><a class='nav-link' href='{{ backpack_url('grupo') }}'><i class='nav-icon la la-terminal'></i> Grupos</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Aplicaciones') --}}
+            <li class='nav-item'><a class='nav-link' href='{{ backpack_url('application') }}'><i class='nav-icon la la-terminal'></i> Aplicaciones</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Matriz') --}}
+            <li class='nav-item'><a class='nav-link' href='{{ backpack_url('matrizop') }}'><i class='nav-icon la la-terminal'></i> Matriz</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Estados') --}}
+            <li class='nav-item'><a class='nav-link' href='{{ backpack_url('estatuse') }}'><i class='nav-icon la la-terminal'></i> Estados</a></li>
+        {{-- @endcan --}}
+        {{-- @can('Menú Modelo de Atención') --}}
+            <li class='nav-item'><a class='nav-link' href='{{ backpack_url('modelatencion') }}'><i class='nav-icon la la-terminal'></i> Modelo de Atención</a></li>
+        {{-- @endcan --}}
+    </ul>
+    {{-- @can('Menú Ticket Soporte') --}}
+    <li class='nav-item'><a class='nav-link' href='{{ backpack_url('tickethd') }}'><i class='nav-icon la la-terminal'></i> Ticket Soporte</a></li>
+    {{-- @endcan --}}
+</li>
+{{-- @endcan --}}
+{{-- <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div> --}}
+{{-- @can('Área de Informes') --}}
+<li class="nav-item nav-dropdown">
+    <a class="nav-link nav-dropdown-toggle" href="#"><i class='nav-icon la la-list'></i>Área Informes</a>
+        {{-- @can('Lista de  Informes') --}}
+        <ul class="nav-dropdown-items">
+            {{-- @can('Informe 1') --}}
+            <li class='nav-item'><a class='nav-link' href='https://app.powerbi.com/view?r=eyJrIjoiNWIzNTJiYmItMTkxNy00ZjJjLWE2YTUtODM2Nzk5MDBhMjdlIiwidCI6ImFmNWViNmE0LTU0OTQtNGE5ZS1hNjU5LWI3OWM5MjMwMWI4ZSIsImMiOjR9'><i class='nav-icon la la-terminal'></i>Informe de Prueba1</a></li>
+            {{-- @endcan --}}
+            {{-- @can('Informe 2') --}}
+                <li class='nav-item'>
+                    <iframe width="760px" height="500px" src="https://sway.office.com/s/ucu9ej7bX28rUAND/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
+                <i class='nav-icon la la-terminal'></i> Informe Embebido</a></li>
+            {{-- @endcan --}}
+       </ul>
+       {{-- @endcan --}}
+</li>
+{{-- @endcan --}}
+{{-- @endcan --}}
